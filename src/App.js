@@ -13,6 +13,7 @@ function App() {
   const checkCalculation = (inputArr) => {
     let isValid = true;
     let result = 0;
+    if (inputArr.length === 0) isValid = false;
     for (let i = 0; i < inputArr.length; i++) {
       if (inputArr[i].includes("\n") || inputArr[i].includes("\\n")) {
         const subInput = inputArr[i].includes("\\n")
